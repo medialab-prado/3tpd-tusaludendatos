@@ -19,6 +19,9 @@ try:
                 row.insert(0, town[0])  # insert id as first column
                 town.pop(0)
                 row[1] = ' '.join(town) # update single town name as second column
+                if len(row) > 21:       # Fix errors in original csvs
+                    row[1] = row[2]+' '+row[1]
+                    row.pop(2)
                 wr.writerow(row)
         else:
             row.insert(0, 'id')         # Adds id label to header
