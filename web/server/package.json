@@ -1,0 +1,14 @@
+{
+  "version": "0.0.0",
+  "main": "server/server.js",
+  "name": "SaludEnDatos",
+  "description": "Radiografia de la sanidad en españa",
+  "author": "Unos chic@s de la ostia",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "engine": "node >= 0.4.1",
+  "devDependencies": {
+    "mysql": "^2.9.0"
+  }
+}
