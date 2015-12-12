@@ -5,6 +5,8 @@
 'use strict';
 
 var path = require('path');
+var giveMeData = require('./giveMeData');
+
 
 module.exports = function(app) {
 
@@ -13,4 +15,29 @@ module.exports = function(app) {
         res.sendFile(path.resolve('../index.html'));
     });
 
+    app.get('/gastosanitario',function(req,res){
+        giveMeData.getGastoSanitario(function(err,response){
+
+            if (err=== null){
+                res.send(response);
+            }
+            else {
+                res.send(err);
+            }
+        })
+
+    });
+
+    app.get('/infeccion',function(req,res){
+        giveMeData.getInfeccionSanitaria(function(err,response){
+
+            if (err=== null){
+                res.send(response);
+            }
+            else {
+                res.send(err);
+            }
+        })
+
+    })
 };

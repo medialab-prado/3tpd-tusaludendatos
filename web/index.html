@@ -29,7 +29,9 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+<video autoplay loop muted poster="screenshot.jpg" id="background">
+    <source src="/video/videoBackground.mp4" type="video/mp4">
+</video>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -77,9 +79,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <h1>Radiografía de la sanidad en España</h1>
+                    <a class="btn btn-info page-scroll btn-lg" href="#sintomas">¿Te has puesto enfermo?</a>
                 </div>
             </div>
         </div>
@@ -107,6 +108,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Diagnóstico</h1>
+                    <div class="col-md-6">
+                        <h2>Gasto sanitario público</h2>
+                        <div id="gastoSanitario"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,7 +122,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Historia Clínica</h1>
+                    <h1>Infección</h1>
+                    <div id="infeccion"></div>
                 </div>
             </div>
         </div>
@@ -152,10 +158,12 @@
     <!--leaflet-->
     <script src="libraries/leaflet.js"></script>
 
+    <script src="js/d3.v3.min.js"></script>
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/barChart.js"></script>
 
 
 
