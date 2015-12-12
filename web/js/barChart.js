@@ -22,7 +22,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(10, "%");
+    .ticks(20);
 
 // create an SVG element (appended to body)
 // set size
@@ -46,7 +46,7 @@ svg.append("g")
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .text("Frequency");
+    .text("Ratio");
 
 // d3.tsv is a wrapper around XMLHTTPRequest, returns array of arrays (?) for a TSV file
 // type function transforms strings to numbers, dates, etc.
