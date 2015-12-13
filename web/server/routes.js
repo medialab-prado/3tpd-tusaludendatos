@@ -39,5 +39,29 @@ module.exports = function(app) {
             }
         })
 
+    });
+    app.get('/mortalidad',function(req,res){
+        giveMeData.getMortalidad(function(err,response){
+
+            if (err=== null){
+                res.send(response);
+            }
+            else {
+                res.send(err);
+            }
+        })
+
+    })
+    app.get('/especialistas',function(req,res){
+        giveMeData.getMortalidad(function(err,response){
+
+            if (err=== null){
+                res.send(response);
+            }
+            else {
+                res.send(err);
+            }
+        })
+
     })
 };

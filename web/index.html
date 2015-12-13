@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title>Su Salud en Datos</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,10 +56,11 @@
                         <a class="page-scroll" href="#sintomas">Síntomas</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#diagnostico">Diagnóstico</a>
+                        <a class="page-scroll" href="#historiaClinica">Historia Clínica</a>
+
                     </li>
                     <li>
-                        <a class="page-scroll" href="#historiaClinica">Historia Clínica</a>
+                        <a class="page-scroll" href="#diagnostico">Diagnóstico</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#recetas">Recetas</a>
@@ -87,66 +88,145 @@
     </section>
 
     <!-- About Section -->
-    <section id="sintomas" class="about-section">
+    <section id="sintomas" class="sintomas-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    <h1>¿Qué define a un organismo enfermo?</h1>
+                    <p class="text-justify">Si hablamos de salud,
+                        para entender cómo afecta una patología a un organismo podemos dirigirnos a la primera acepción de enfermedad de la RAE
+                        que la define como “alteración más o menos grave de la salud”. Sin embargo, en cuanto a la sanidad española y sus desigualdades
+                        quizá sea la tercera explicación de la Academia la que más se adapta a la realidad: “Anormalidad dañosa en el funcionamiento
+                        de una institución, colectividad, etc”. La “pasión dañosa o alteración en lo moral o espiritual” a la que se refiere la segunda
+                        acepción quizá sirve para definir el bloque de propuestas políticas, tan sumido en campaña estos días.</p>
                     <div class="col-lg-6">
-                        <div id="mapa"></div>
+                        <h1>Sintomas</h1>
+                        <p class="text-justify">
+                            Según los Barómetros de Opinión mensuales, la Sanidad no aparecía como problema principal
+                            para los ciudadanos españoles (serie elaborada desde 1985) hasta el año 2000, aunque lo hace de forma casi irrelevante.
+                            Sin embargo, desde el último trimestre de 2011 la Sanidad se sitúa como el quinto problema para la población española,
+                            tras el paro y otros problemas de índole económica y la corrupción o los políticos en general. El indicador se ha incrementado
+                            desde ese momento.
+                            En estos 4 años (desde noviembre 2011, hasta noviembre 2015), se ha incrementado de 7,7 a 11,9.
+                        </p>
                     </div>
                     <div class="col-lg-6">
-                        <div id="mapa2"></div>
+                        <img class="img-responsive" src="images/GastoSanitario2013.png">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="images/CENTROS_SALUD.png">
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Sintomas</h1>
+                        <p class="text-justify">
+                            Se da el caso que las provincias con mayor número de camas privadas, Barcelona y Girona, se encuentra en Cataluña, una de las comunidades con mayor descontento en percepción de calidad sanitaria. A su vez, esas provincias hay menor número de camas públicas. ¿Apuesta por modelo mixto? ¿No colma expectativas?
+                           <br> Más camas públicas x 100.000 habitantes, León (302), Zaragoza, (314), Orense (316), Zamora (323), Soria (364)
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<!-- Historia Clínica -->
+<section id="historiaClinica" class="historiaClinica-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Historial Clínico</h1>
+                <blockquote>
+                <p class="text-justify">
+                    El sistema sanitario español funciona como una matrioska rusa.
+                    A la división habitual de comunidades y provincias, y por ende de delegación de servicios, se suma una tercera capa:
+                    las áreas sanitarias. Este modelo fomenta que cada comunidad gestione su sanidad de forma diferente al resto.
+                    Y en estas diferencias nacen las desigualdades.
+                </p>
+                <h2>420 euros diferencian a un vasco de un andaluz</h2>
+
+                    <p class="text-justify"> 420,71 euros. Esa es la cantidad que diferencia el gasto sanitario por habitante que dedicaban Andalucía y País Vasco en 2013.
+                        La primera comunidad destinaba 1.149,7 euros al gasto sanitario por cada habitante y la segunda 1.570,41.
+                        Esta diferencia económica es común al sistema sanitario, en el que las comunidades forales se sitúan por encima del resto,
+                        siendo Navarra la segunda que más destina a gasto por habitante, 1522,57.</p>
+                    <footer>Declaraciones de la diferencia entre comunidades económicas y cómo afecta a la asistencia hospitalaria // Análisis del descenso de la financiación y de la evolución decreciente del gasto sanitario. s</footer>
+                </blockquote>
+                <ul id="myTabs" class="nav nav-pills nav-justified">
+                    <li class="active" ><a id="infeccionButton" href="#infeccionTab">Tasa de infección hospitalaria</a></li>
+                    <li><a id="mortalidadButton" href="#mortalidadTab">Mortalidad Intrahospitalaria</a></li>
+                    <li><a id="especialistasButton" href="#especialistasTab">Especialistas por habitante</a></li>
+                </ul>
+                <div id="graphsContainer" class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="infeccionTab">
+                        <h1>Infección</h1>
+                        <div id="infeccion"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="mortalidadTab">
+                        <h1>Mortalidad Intrahospitalaria</h1>
+                        <div id="mortalidad"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="especialistasTab">
+                        <h1>Número de especialistas por habitante</h1>
+                        <div id="especialistas"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!--  Diagnostico -->
-    <section id="diagnostico" class="services-section">
+    <section id="diagnostico" class="diagnostico-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Diagnóstico</h1>
                     <div class="col-md-6">
-                        <h2>Gasto sanitario público</h2>
-                        <div id="gastoSanitario"></div>
+                        <!--<h2></h2>-->
+                        <div id="gastoSanitario">
+                            A pesar de que el sistema sanitario español cuenta con buena fama en el ámbito internacional varios indicadores lo sitúan a la cola de las principales potencias de la UE.
+                            <br>España dedicó el 9,2% de su Producto Interior Bruto (PIB) a gastos sanitarios en 2012, último año con datos publicados por el Eurostat, la oficina estadística europea. Eso la coloca en el noveno puesto, empatada con Grecia, en una clasificación que suma el gasto sanitario público y privado de 24 países europeos.
+                            <br>Es decir, que la suma del valor de todos los bienes y servicios producidos en España en 2012 da una cifra cercana a 1 millón de millones de euros. De esa cantidad, nueve de cada 100 euros fueron dedicados a la sanidad.
+                            <br>Lidera la lista los Países Bajos, que dedicó un 11,8% de su PIB a gasto sanitario, seguido de Francia, Alemania, Bélgica, Dinamarca, Austria y Portugal. España, no obstante, está por encima de la media europea a este respecto, que en los 24 países estudiados asciende al 8,4%. La clasificación no cuenta con los datos de Italia, Irlanda ni Reino Unido.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="responsive" src="images/diagnosticoEu.png">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Historia Clínica -->
-    <section id="historiaClinica" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Infección</h1>
-                    <div id="infeccion"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Recetas -->
-    <section id="recetas" class="services-section">
+    <section id="recetas" class="recetas-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>El frenadol es un timo!</h1>
+                    <h1>Recetas</h1>
                 </div>
             </div>
         </div>
     </section>
     <!-- Lista de Espera-->
-    <section id="listaDeEspera" class="services-section">
+    <section id="listaDeEspera" class="listaDeEspera-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    <br>
+                    <br>
                     <h1>Lista de Espera</h1>
+                    <div class="col-md-6">
+                        <img id="bbdd" class="img-responsive" src="images/bbdd.png">
+                        <img id="mapaBlanco" class="img-responsive" src="images/mapaBlanco.png">
+                    </div>
+                    <div class="col-md-6">
+                        <iframe src="https://docs.google.com/forms/d/1hjc7KpX6xu4N-w_vg8eRxN2gvgYGkOPc-teIJKhxhfY/viewform?embedded=true" width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+<section class="footer-Section">
     </section>
 
     <!-- jQuery -->
@@ -164,8 +244,6 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/main.js"></script>
     <script src="js/barChart.js"></script>
-
-
 
 </body>
 

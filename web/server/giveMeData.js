@@ -34,5 +34,32 @@ giveMeData.getInfeccionSanitaria = function(callback){
 
 };
 
+giveMeData.getMortalidad = function(callback){
+
+    db.consultaMortalidad(function(err,res){
+
+        if(err === null){
+            callback(null,res);
+        } else {
+            callback("error en Infección sanitaria",err)
+        }
+
+    });
+
+};
+giveMeData.getEspecialistas = function(callback){
+
+    db.consultaEspecialistas(function(err,res){
+
+        if(err === null){
+            callback(null,res);
+        } else {
+            callback("error en Infección sanitaria",err)
+        }
+
+    });
+
+};
+
 
 module.exports = giveMeData;

@@ -37,22 +37,45 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
 }
 
-.about-section {
-    height: 100%;
+.sintomas-section {
+    height: 200%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
 }
 
-.services-section {
+.historiaClinica-section {
+    height: 200%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.diagnostico-section {
+    height: 150%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+
+.recetas-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
 }
 
-.contact-section {
-    height: 100%;
+.listaDeEspera-section {
+    height: 200%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+    margin-bottom: 100px;
+}
+
+.footer-section{
+    height: 200%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -105,25 +128,33 @@ path {
 
 
 /*barchar*/
-#infeccion .bar {
+#graphsContainer .bar {
     fill: steelblue;
 }
 
-#infeccion .bar:hover {
+#graphsContainer .bar:hover {
     fill: brown;
 }
 
-#infeccion .axis {
+#graphsContainer .axis {
     font: 10px sans-serif;
 }
 
-#infeccion .axis path,
-#infeccion .axis line {
+#graphsContainer .axis path,
+#graphsContainer .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
 }
 
-#infeccion .x.axis path {
+#graphsContainer .x.axis path {
     display: none;
+}
+
+#mapaBlanco{
+    margin-top: 30%;
+}
+
+#bbdd{
+    margin-top: 10%;
 }

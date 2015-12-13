@@ -63,13 +63,14 @@ var margin = {top: 30, right: 100, bottom: 70, left: 50},
 
 // Parse the date / time
 var parseDate = d3.time.format("%Y").parse;
-
+var round = d3.round(x);
 // Set the ranges
-var x = d3.time.scale().range([0, width]);
+var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
+    .tickFormat(d3.format("d"))
     .orient("bottom");
 
 var yAxis = d3.svg.axis().scale(y)
@@ -99,8 +100,8 @@ $.get( "/gastosanitario", function(data) {
     //        d.price = +d.price;
         //});
 
-        // Scale the range of the data
-        x.domain(d3.extent(data, function(d) { return d.date; }));
+        // Scale the range of the datas
+        x.domain([ d3.min(data, function(d) { return d.date; }), d3.max(data, function(d) { return d.date; })]);
         y.domain([ d3.min(data, function(d) { return d.price; }), d3.max(data, function(d) { return d.price; })]);
 
         // Nest the entries by symbol
